@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="calculator">
+        <div id="display" class="display">0</div>
+        
+        <!-- Row 1: Clear, Delete, and Operators -->
+        <div class="button-row">
+            <button class="button clear" onclick="clearDisplay()">C</button>
+            <button class="button delete" onclick="deleteLast()">DEL</button>
+            <button class="button operator" onclick="inputOperation('/')">/</button>
+            <button class="button operator" onclick="inputOperation('*')">*</button>
+        </div>
+
+        <!-- Row 2: Numbers 7, 8, 9, and Subtraction -->
+        <div class="button-row">
+            <button class="button" onclick="inputNumber('7')">7</button>
+            <button class="button" onclick="inputNumber('8')">8</button>
+            <button class="button" onclick="inputNumber('9')">9</button>
+            <button class="button operator" onclick="inputOperation('-')">-</button>
+        </div>
+
+        <!-- Row 3: Numbers 4, 5, 6, and Addition -->
+        <div class="button-row">
+            <button class="button" onclick="inputNumber('4')">4</button>
+            <button class="button" onclick="inputNumber('5')">5</button>
+            <button class="button" onclick="inputNumber('6')">6</button>
+            <button class="button operator" onclick="inputOperation('+')">+</button>
+        </div>
+
+        <!-- Row 4: Numbers 1, 2, 3, and Equals -->
+        <div class="button-row">
+            <button class="button" onclick="inputNumber('1')">1</button>
+            <button class="button" onclick="inputNumber('2')">2</button>
+            <button class="button" onclick="inputNumber('3')">3</button>
+            <button class="button equal" onclick="calculateResult()">=</button>
+        </div>
+
+        <!-- Row 5: Zero and Decimal -->
+        <div class="button-row">
+            <button class="button zero" onclick="inputNumber('0')">0</button>
+            <button class="button" onclick="inputNumber('.')">.</button>
+        </div>
+    </div>
+
+    <!-- Including JavaScript file -->
+    <script src="script.js"></script>
+</body>
+
+</html>
